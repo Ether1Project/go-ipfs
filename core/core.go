@@ -192,7 +192,7 @@ func (n *IpfsNode) startOnlineServices(ctx context.Context, routingOption Routin
 		//return err
 	}
 	*/
-        var swarmkey = "/key/swarm/psk/1.0.0/\n/base16/\n38307a74b2176d0054ffa2864e31ee22d0fc6c3266dd856f6d41bddf14e2ad63"
+        var swarmkey = []byte("/key/swarm/psk/1.0.0/\n/base16/\n38307a74b2176d0054ffa2864e31ee22d0fc6c3266dd856f6d41bddf14e2ad63")
 	if swarmkey != nil {
 		protec, err := pnet.NewProtector(bytes.NewReader(swarmkey))
 		if err != nil {
